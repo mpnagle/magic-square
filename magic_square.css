@@ -1,0 +1,28 @@
+/* CSS declarations go here */
+
+body {
+    font-family:Arial;
+}
+
+td {
+        font-family:Arial;
+    padding:10px;
+    border:2px;
+    border-style:solid;
+}
+
+td:empty {
+    border:0px;
+}
+
+.square {    
+    color:blue;
+    }
+
+.square input{
+    font-family:Arial;
+}
+
+.result {
+    color:green;
+}

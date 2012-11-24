@@ -1,0 +1,46 @@
+<head>
+  <title>magic_square</title>
+</head>
+
+<body>
+  {{> square}}
+</body>
+
+<template name="square">
+
+
+  <table>
+      <caption>Using the numbers 1 - 9 exctly once, make all rows, columns, and diagonals add up to the same number</caption>
+    <tr>
+      <td></td>
+      <td><input id="1" type="text" class="square"/></td>
+      <td><input id="2" type="text" class="square"/></td>
+      <td><input id="3" type="text" class="square"/></td>
+      <td id="row1sum" class="result"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><input id="4" type="text" class="square"/></td>
+      <td><input id="5" type="text" class="square"/></td>
+      <td><input id="6" type="text" class="square"/></td>
+      <td id="row2sum" class="result"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><input id="7" type="text" class="square"/></td>
+      <td><input id="8" type="text" class="square"/></td>
+      <td><input id="9" type="text" class="square"/></td>
+      <td id="row3sum" class="result"></td>
+    </tr>
+    <tr>
+      <td id="diag1sum" class="result"></td>
+      <td id="col1sum" class="result"></td>
+      <td id="col2sum" class="result"></td>
+      <td id="col3sum" class="result"></td>
+      <td id="diag2sum" class="result"></td>
+    </tr>
+	
+  </table>
+	
+
+</template>
