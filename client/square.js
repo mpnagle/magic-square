@@ -10,7 +10,32 @@ Session.set("9",0);
 
 
 
-Template.square.events({
+Template.threeByThree.events({
+/*    'keyup input': function(evt) {
+
+	//parseInt necesarry here?
+	var inputId = parseInt(evt.srcElement.id);
+	
+	console.log(inputId);
+
+
+	currentInput = ($('#' + inputId));
+
+	console.log(currentInput);
+	var currentVal = parseInt(currentInput.val());
+
+	console.log(currentVal);
+	
+//	var currentInput = parseInt($('#' + inputId).val());
+
+
+
+//	console.log(currentInput);
+    },*/
+
+
+
+    
     'keyup input#1': function (evt) {
 	var one = parseInt($("#1").val());
 	Session.set("1", one);
@@ -86,3 +111,62 @@ Meteor.autorun(function(){
 
 });
 
+
+// Code to generate n x n table.
+
+/*
+Template.square.makeSquare = function(size) {
+    Meteor.defer(function(){
+	
+//	var newTable = $('<table>');
+
+	newTable = '<table>';
+	for (var i=0; i<size; i++)
+	{
+
+	    newTable+='<tr>';
+	    
+	    newTable+='<td></td>';
+	    
+	    for (var j=0; j<size; j++)
+	    {
+		currentId = (i*size) + (j+1);
+		newTable+='<td><input id=' + currentId + ' class="square"/></td>';
+	    }
+	    
+	    newTable+='<td id=row' + i + 'sum class="result"></td>';
+
+	    newTable+='</tr>';
+	    
+	}
+
+	newTable+='<td id="diag1sum"></td>';
+	
+	for (var k=0; k<size; k++)
+	{
+	    newTable+='<td id="col' + k + 'sum class="result"></td>';
+	}
+	
+	newTable+='<td id="diag2sum"></td>';
+
+	newTable+='</table>';
+	
+	if ($("#newTable").length)
+	{ 
+	    console.log("#newTable exists!");
+	}
+	else
+	{
+	    console.log("#newTable doesn't exist yet!");
+	}
+	
+	$(document).ready(function(){
+	$("#newTable").html(newTable);
+	console.log("ready!");
+	});
+	$("#newTable").append(newTable);
+    });
+}
+		 
+		 
+*/
