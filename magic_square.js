@@ -8,6 +8,11 @@ Sections = new Meteor.Collection("sections");
 
 if (Meteor.isClient) {
 
+    Meteor.startup(function(){
+	Session.set("which_screen",0);
+    });
+    
+
     Template.leftSidebar.sections = function () {
 	return Sections.find({});
     };
